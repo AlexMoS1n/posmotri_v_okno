@@ -50,11 +50,10 @@ ol {
 .content {
   display: grid;
   justify-content: center;
-  align-items: flex-end;
+  align-items: end;
   column-gap: 30px;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 133px 30px;
   grid-template: auto/auto auto;
 }
 
