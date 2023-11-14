@@ -74,9 +74,10 @@ ol {
 }
 
 .search-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template: 1fr / auto 1fr auto;
+  column-gap: 40px;
+  align-items: start;
 
 }
 
@@ -94,12 +95,12 @@ ol {
   font-size: 18px;
   line-height: normal;
   letter-spacing: 0em;
-  text-align: left;
 }
 
 .search-form__label {
   display: flex;
   cursor: pointer;
+  width: fit-content;
 }
 
 .search-form__textfield {
@@ -114,7 +115,7 @@ ol {
   font-size: 18px;
   font-style: normal;
   line-height: normal;
-  padding-top: 3px;
+  padding-top: 2px;
 }
 
 .search-form__textfield::placeholder {
@@ -133,9 +134,12 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-right: 5px;
 }
 
 .search-form__pseudo-checkbox {
+  display: inline-block;
+  vertical-align: middle;
   width: 19px;
   height: 19px;
   border: 1px solid #FFF;
