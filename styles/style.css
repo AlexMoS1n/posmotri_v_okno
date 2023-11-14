@@ -103,9 +103,19 @@ ol {
   cursor: pointer;
 }
 
+.search-form__label:focus {
+  outline: none;
+}
+
 .search-form__label:has(:focus-visible) {
+  border: none;
   outline: 1px solid #fff;
   outline-offset: 1px;
+}
+
+.search-form__label:active {
+  border: none;
+  outline: none;
 }
 
 .search-form__textfield {
@@ -129,7 +139,13 @@ ol {
 }
 
 .search-form__textfield:focus {
-  outline: 0;
+  outline: none;
+}
+
+.search-form__textfield:active {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  outline: none;
 }
 
 .search-form__checkbox-list {
@@ -147,6 +163,10 @@ ol {
   line-height: normal;
 }
 
+.search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline;
+}
+
 .search-form__pseudo-checkbox {
   display: inline-block;
   width: 19px;
@@ -154,6 +174,14 @@ ol {
   margin-right: 5px;
   border: 1px solid #FFF;
   vertical-align: middle;
+}
+
+.search-form__checkbox:checked+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  outline: 2px solid #000 ;
+  outline-offset: -3px;
+  background-color: #fff;
 }
 
 .search-form__submit-button {
@@ -202,8 +230,29 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   color: #FFF;
   text-decoration: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__video-card {
@@ -230,7 +279,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  line-height: 16.2px; /* 90% */ 
+  line-height: 16.2px;
 }
 
 .content__video-card-thumbnail {
@@ -261,3 +310,30 @@ ol {
   background: transparent;
   cursor: pointer;
 }
+
+
+.button.focus {
+  outline: none;
+}
+
+.search-form__submit-button:focus-visible {
+  border-radius: 0;
+  outline: 1px solid #fff;
+  outline-offset: 2px ;
+}
+
+.more-button:focus-visible {
+  border-radius: 0;
+  outline: 1px solid #fff;
+  outline-offset: -4px ;
+}
+
+.button:active {
+  outline: none;
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
