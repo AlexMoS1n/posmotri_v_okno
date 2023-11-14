@@ -75,9 +75,9 @@ ol {
 
 .search-form {
   display: grid;
-  grid-template: 1fr / auto 1fr auto;
-  column-gap: 40px;
-  align-items: start;
+  grid-template: 1fr / repeat(3,auto);
+  justify-content: space-between;
+  align-items: end;
 
 }
 
@@ -115,7 +115,6 @@ ol {
   font-size: 18px;
   font-style: normal;
   line-height: normal;
-  padding-top: 0px;
 }
 
 .search-form__textfield::placeholder {
@@ -125,6 +124,7 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   column-gap: 15px;
+  padding-bottom: 5px;
 }
 
 .search-form__label-text {
@@ -143,26 +143,12 @@ ol {
   width: 19px;
   height: 19px;
   border: 1px solid #FFF;
+  margin-right: 5px;
 }
 
 .search-form__submit-button {
-  align-self: flex-end;
-  background: transparent;
-  cursor: pointer;
-  border: 1px solid #FFF;
-  display: flex;
   width: 194px;
   height: 34px;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-
 }
 
 .content__details {
@@ -171,7 +157,7 @@ ol {
 }
 
 .title {
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
@@ -196,7 +182,7 @@ ol {
 }
 
 .content__list-item {
-  margin-bottom: 30px;
+  margin-bottom: 35px; /*Хоть в Figma и указан отступ 30px, но по шаблону больше подходит именно этот размер */
 }
 
 .content__list-item:last-of-type {
@@ -244,14 +230,23 @@ ol {
 }
 
 .more-button {
+  width: 100%;
+  padding: 6px 0;
+}
+
+.button {
   display: flex;
-  height: 34px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  cursor: pointer;
   border: 1px solid #FFF;
-  width: 100%;
-  color: #FFF;
-  background-color: transparent;
-  color: white;
+  color: #fff;
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  background: transparent;
 }
