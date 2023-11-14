@@ -75,9 +75,9 @@ ol {
 
 .search-form {
   display: grid;
-  grid-template: 1fr / repeat(3,auto);
+  grid-template: 1fr / auto 212px auto;
   justify-content: space-between;
-  align-items: end;
+  align-items: start;
 
 }
 
@@ -115,6 +115,7 @@ ol {
   font-size: 18px;
   font-style: normal;
   line-height: normal;
+  padding-top: 3px;
 }
 
 .search-form__textfield::placeholder {
@@ -123,8 +124,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  column-gap: 15px;
-  padding-bottom: 5px;
+  justify-content: space-between;
 }
 
 .search-form__label-text {
@@ -149,6 +149,7 @@ ol {
 .search-form__submit-button {
   width: 194px;
   height: 34px;
+  align-self: end;
 }
 
 .content__details {
