@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -16,9 +19,6 @@ html {
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 h1,
@@ -51,12 +51,12 @@ ol {
 } 
 
 .content {
-  margin: 133px auto;
   display: grid;
-  grid-template: auto/auto auto;
   align-items: end;
   column-gap: 30px;
   max-width: 1140px;
+  margin: 133px auto;
+  grid-template: auto/auto auto;
 }
 
 .result__video-container {
@@ -75,9 +75,9 @@ ol {
 
 .search-form {
   display: grid;
-  grid-template: 1fr / auto 212px auto;
   justify-content: space-between;
   align-items: start;
+  grid-template: 1fr / auto 212px auto;
 
 }
 
@@ -99,8 +99,8 @@ ol {
 
 .search-form__label {
   display: flex;
-  cursor: pointer;
   width: fit-content;
+  cursor: pointer;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -113,14 +113,14 @@ ol {
   border: none;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
-  background-color: transparent;
+  padding-top: 3px;
   color: rgba(255, 255, 255, 1);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: normal;
-  padding-top: 3px;
+  background-color: transparent;
   appearance: none;
 }
 
@@ -138,28 +138,28 @@ ol {
 }
 
 .search-form__label-text {
+  margin-right: 5px;
   color: #FFF;
   font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  margin-right: 5px;
 }
 
 .search-form__pseudo-checkbox {
   display: inline-block;
-  vertical-align: middle;
   width: 19px;
   height: 19px;
-  border: 1px solid #FFF;
   margin-right: 5px;
+  border: 1px solid #FFF;
+  vertical-align: middle;
 }
 
 .search-form__submit-button {
+  align-self: end;
   width: 194px;
   padding: 6px 0;
-  align-self: end;
 }
 
 .content__details {
@@ -216,13 +216,13 @@ ol {
 }
 
 .content__video-card-title {
+  margin-bottom: 6px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
-  margin-bottom: 6px;
 }
 
 .content__video-card-description {
@@ -252,12 +252,12 @@ ol {
   align-items: center;
   border: 1px solid #FFF;
   color: #fff;
-  text-align: center;
   font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
-  cursor: pointer;
+  text-align: center;
   background: transparent;
+  cursor: pointer;
 }
