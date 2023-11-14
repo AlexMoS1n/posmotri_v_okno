@@ -75,37 +75,36 @@ ol {
 
 .search-form {
   display: flex;
-  align-items: flex-end; 
+  justify-content: space-between;
+  align-items: flex-start;
+
 }
 
 .search-form__fieldset {
-  flex-grow: 1;
-  border: 0;
   display: flex;
   flex-direction: column;
   justify-content: start;
   row-gap: 5px;
+  border: none;
 }
 
 .search-form__fieldset-title {
   font-family: 'Fira Sans Condensed',sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: normal;
   letter-spacing: 0em;
   text-align: left;
 }
 
 .search-form__label {
   display: flex;
-  gap: 10px;
   cursor: pointer;
 }
 
 .search-form__textfield {
   width: 225px;
   border: none;
-  padding: 6px 0;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
   background-color: transparent;
@@ -115,7 +114,7 @@ ol {
   font-size: 18px;
   font-style: normal;
   line-height: normal;
-
+  padding-top: 3px;
 }
 
 .search-form__textfield::placeholder {
@@ -136,6 +135,12 @@ ol {
   line-height: normal;
 }
 
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #FFF;
+}
+
 .search-form__submit-button {
   align-self: flex-end;
   background: transparent;
@@ -146,17 +151,13 @@ ol {
   height: 34px;
   justify-content: center;
   align-items: center;
-
-color: #fff;
-
-color: #FFF;
-
-text-align: center;
-font-family: 'Fira Sans Condensed', sans-serif;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  color: #fff;
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 
 }
 
@@ -166,9 +167,9 @@ line-height: normal;
 }
 
 .title {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -178,13 +179,6 @@ line-height: normal;
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
-  font-weight: 700;
-  font-size: 75px;
-  font-style: normal;
-  line-height: 94%; /* 70.5px */
-  text-transform: uppercase;
-  vertical-align: baseline;
 }
 
 .content__list {
@@ -199,7 +193,6 @@ line-height: normal;
 
 .content__list-item {
   margin-bottom: 30px;
-  padding: 2px;
 }
 
 .content__list-item:last-of-type {
