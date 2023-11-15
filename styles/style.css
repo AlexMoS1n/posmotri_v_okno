@@ -77,10 +77,10 @@ ol {
 }
 
 .search-form {
-  width: 100%;
   display: grid;
   justify-content: space-between;
   align-items: start;
+  width: 100%;
   grid-template: 1fr / repeat(3,auto);
 }
 
@@ -93,9 +93,9 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed',sans-serif;
+  font-family: inherit;
   font-weight: 400;
-  font-size: 18px;
+  font-size: inherit;
   line-height: normal;
   letter-spacing: 0em;
 }
@@ -125,13 +125,13 @@ ol {
 .search-form__textfield {
   width: 225px;
   border: none;
-  color: rgba(255, 255, 255, 1);
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   padding-top: 3px;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  color: rgba(255, 255, 255, 1);
+  font-family: inherit;
   font-weight: 400;
-  font-size: 18px;
+  font-size: inherit;
   font-style: normal;
   line-height: normal;
   background-color: transparent;
@@ -154,15 +154,14 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  column-gap: 10px;
+  column-gap: 15px;
 }
 
 .search-form__label-text {
-  margin-right: 5px;
-  color: #FFF;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  color: inherit;
+  font-family: inherit;
   font-weight: 400;
-  font-size: 18px;
+  font-size: inherit;
   font-style: normal;
   line-height: normal;
 }
@@ -265,6 +264,8 @@ ol {
 
 .content__video-card-title {
   margin-bottom: 6px;
+  overflow: hidden;
+  color: inherit;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -273,18 +274,18 @@ ol {
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed', sans-serif;
+  overflow: hidden;
+  color: inherit;
+  font-family: inherit;
   font-weight: 400;
-  font-size: 18px;
+  font-size: inherit;
   font-style: normal;
   line-height: 16.2px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
@@ -296,20 +297,20 @@ ol {
 }
 
 .more-button {
-  width: calc(100% - 4px); /* До этого реализовывал при фокусе как внутренний outline для данного класса, но Вы сделали замечние, что для кнопок должен быть единый стиль фокуса, поэтому пришлось применить данный ход */ 
+  width: calc(100% - 4px); /* До этого реализовывал при фокусе как внутренний outline для данного класса, но Вы сделали замечние, что для кнопок должен быть единый стиль фокуса, поэтому пришлось применить данный ход */
+  margin: 0 auto; 
   padding: 6px 0;
-  margin: 0 auto;
 }
 
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
   border: 1px solid currentColor;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  color: #fff;
+  font-family: inherit;
   font-weight: 700;
-  font-size: 18px;
+  font-size: inherit;
   font-style: normal;
   line-height: normal;
   text-align: center;
@@ -322,10 +323,10 @@ ol {
 }
 
 .button:focus-visible {
+  margin-bottom: 2px; /* Добавил к кнопке нижний отступ, иначе не отображается нижняя линия при фокусе */
   border-radius: 0;
   outline: 1px solid #fff;
-  outline-offset: 1px;
-  margin-bottom: 2px; /* Добавил к кнопке нижний отступ, иначе не отображается нижняя линия при фокусе */ 
+  outline-offset: 1px; 
 }
 
 .button:active {
@@ -337,14 +338,9 @@ ol {
   text-decoration: underline;
 }
 
-/* 1. При реализации ситуации с поиском отсутствующих видео,
+/* При реализации ситуации с поиском отсутствующих видео,
 текст заголовка "Нет подходящи видео =(" в макете реализован
 другим шрифтом, хотя в фигме стоят все настройки по-умолчанию, как
 в error.css я пытался сузить слова с помощью отрицательных значений 
 word-spacing, но тогда отстуствуют пробелы из-за разности жирности шрифтов,
-поэтому оставил как есть 
- 2. На Вашу рекомендацию о не дублировании параметров текста, я не проигнорировал, 
- просто не совсем до конца понимаю, как это правильно сделать и боюсь наделать новых ошибок.
- Но хочу проконсультироваться более лучше и точнее с наставником и старшими студентами. 
- В общем пока хочу разобраться. Но обязуюсь ее проработать =)))   
-*/
+поэтому оставил как есть */
