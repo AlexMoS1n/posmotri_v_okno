@@ -93,7 +93,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: inherit;
+  font-family: inherit; /* inherit наследует свойства от прямого родитея, однако такие свойства, как font-family, font-size, color и пр. являются наследуемыми, поэтому здесь и далее я не использовал цепочку родителей для их присвоения от класса .page к классам содержащим текст */
   font-weight: 400;
   font-size: inherit;
   line-height: normal;
