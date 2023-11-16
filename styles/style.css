@@ -12,13 +12,16 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  inline-size: 1200px;
+  block-size: 100%;
   margin: auto;
+  background-color: #1b1919;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  background-color: #1b1919;
-  inline-size: 1200px;
-  block-size: 100%;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 h1,
@@ -94,11 +97,11 @@ ol {
 
 .search-form__fieldset-title {
   font-family: inherit; /* inherit наследует свойства от прямого родитея, однако такие свойства, как font-family, font-size, color и пр. являются наследуемыми, поэтому здесь и далее я не использовал цепочку родителей для их присвоения от класса .page к классам содержащим текст */
-  font-weight: 400;
+  font-weight: inherit;
   font-size: inherit;
-  line-height: normal;
-  letter-spacing: 0em;
+  line-height: inherit;
   color: inherit;
+  font-style: inherit;
 }
 
 .search-form__label {
@@ -129,12 +132,12 @@ ol {
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   padding-top: 3px;
-  color: rgba(255, 255, 255, 1);
-  font-family: inherit;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 1); /* inherit здесь не применял, чтоб показать разницу с placeholder  */
+  font-family: inherit; 
+  font-weight: inherit;
   font-size: inherit;
-  font-style: normal;
-  line-height: normal;
+  line-height: inherit;
+  font-style: inherit;
   background-color: transparent;
   appearance: none;
 }
@@ -160,11 +163,11 @@ ol {
 
 .search-form__label-text {
   color: inherit;
-  font-family: inherit;
-  font-weight: 400;
+  font-family: inherit; 
+  font-weight: inherit;
   font-size: inherit;
-  font-style: normal;
-  line-height: normal;
+  line-height: inherit;
+  font-style: inherit;
 }
 
 .search-form__checkbox-list .search-form__label:hover {
@@ -200,11 +203,11 @@ ol {
 
 .title {
   margin-bottom: 26px;
-  color: #fff;
+  color:inherit;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
-  font-style: normal;
+  font-style: inherit;
   line-height: 94%; 
   text-transform: uppercase;
 }
@@ -270,8 +273,8 @@ ol {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  font-style: normal;
-  line-height: 100%; /* 30px */
+  font-style: inherit;
+  line-height: 100%;
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -281,9 +284,9 @@ ol {
   overflow: hidden;
   color: inherit;
   font-family: inherit;
-  font-weight: 400;
+  font-weight: inherit;
   font-size: inherit;
-  font-style: normal;
+  font-style: inherit;
   line-height: 16.2px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -312,8 +315,8 @@ ol {
   font-family: inherit;
   font-weight: 700;
   font-size: inherit;
-  font-style: normal;
-  line-height: normal;
+  font-style: inherit;
+  line-height: inherit;
   text-align: center;
   background: transparent;
   cursor: pointer;
