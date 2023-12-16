@@ -96,7 +96,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: inherit; /* inherit наследует свойства от прямого родитея, однако такие свойства, как font-family, font-size, color и пр. являются наследуемыми, поэтому здесь и далее я не использовал цепочку родителей для их присвоения от класса .page к классам содержащим текст */
+  font-family: inherit; 
   font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -132,7 +132,7 @@ ol {
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   padding-top: 3px;
-  color: rgba(255, 255, 255, 1); /* inherit здесь не применял, чтоб показать разницу с placeholder  */
+  color: rgba(255, 255, 255, 1); 
   font-family: inherit; 
   font-weight: inherit;
   font-size: inherit;
@@ -301,7 +301,7 @@ ol {
 }
 
 .more-button {
-  width: calc(100% - 4px); /* До этого реализовывал при фокусе как внутренний outline для данного класса, но Вы сделали замечние, что для кнопок должен быть единый стиль фокуса, поэтому пришлось применить данный ход */
+  width: calc(100% - 4px); 
   margin: 0 auto; 
   padding: 6px 0;
 }
@@ -327,7 +327,7 @@ ol {
 }
 
 .button:focus-visible {
-  margin-bottom: 2px; /* Добавил к кнопке нижний отступ, иначе не отображается нижняя линия при фокусе */
+  margin-bottom: 2px; 
   border-radius: 0;
   outline: 1px solid #fff;
   outline-offset: 1px; 
@@ -341,10 +341,3 @@ ol {
 .button:hover {
   text-decoration: underline;
 }
-
-/* При реализации ситуации с поиском отсутствующих видео,
-текст заголовка "Нет подходящи видео =(" в макете реализован
-другим шрифтом, хотя в фигме стоят все настройки по-умолчанию, как
-в error.css я пытался сузить слова с помощью отрицательных значений 
-word-spacing, но тогда отстуствуют пробелы из-за разности жирности шрифтов,
-поэтому оставил как есть */
